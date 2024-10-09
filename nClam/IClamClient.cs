@@ -114,13 +114,20 @@ namespace nClam
     /// <returns></returns>
     Task<ClamScanResult> SendAndScanFileAsync(Stream sourceStream);
 
-    /// <summary>
-    /// Sends the data to the ClamAV server as a stream.
-    /// </summary>
-    /// <param name="sourceStream">Stream containing the data to scan.</param>
-    /// <param name="cancellationToken">cancellation token used for request</param>
-    /// <returns></returns>
-    Task<ClamScanResult> SendAndScanFileAsync(Stream sourceStream, CancellationToken cancellationToken);
+		/// <summary>
+		/// Sends the data to the ClamAV server as a stream.
+		/// </summary>
+		/// <param name="sourceStream">Stream containing the data to scan.</param>
+		/// <returns></returns>
+		ClamScanResult SendAndScanFile(Stream sourceStream);
+
+		/// <summary>
+		/// Sends the data to the ClamAV server as a stream.
+		/// </summary>
+		/// <param name="sourceStream">Stream containing the data to scan.</param>
+		/// <param name="cancellationToken">cancellation token used for request</param>
+		/// <returns></returns>
+		Task<ClamScanResult> SendAndScanFileAsync(Stream sourceStream, CancellationToken cancellationToken);
 
     /// <summary>
     /// Reads the file from the path and then sends it to the ClamAV server as a stream.
