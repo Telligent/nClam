@@ -12,7 +12,7 @@
 
   <PropertyGroup>
     <PackageId>nClam</PackageId>
-    <PackageVersion>8.0.0</PackageVersion>
+    <PackageVersion>$(BuildNumber)</PackageVersion>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
